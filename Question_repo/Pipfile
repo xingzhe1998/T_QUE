@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "http://mirrors.aliyun.com/pypi/simple/"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pillow = "==6.0.0"
+django-ckeditor = "==5.7.0"
+django-js-asset = "==1.2.2"
+django-redis = "==4.10.0"
+easy-thumbnails = "==2.6"
+pytz = "==2019.1"
+redis = "==3.2.1"
+sqlparse = "==0.3.0"
+xlrd = "==1.2.0"
+Django = "==1.11.20"
+
+[requires]
+python_version = "3.7"

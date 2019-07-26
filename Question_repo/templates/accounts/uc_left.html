@@ -1,0 +1,26 @@
+<div class="panel">
+  <div class="panel-body">
+    <ul class="nav nav-pills nav-stacked">
+{#    url 'usercenter:profile' ==> 在前端这个表示一个语句 ==> 有点类似于后端的反向解析reverse('usercenter:profile')语句 #}
+    {% url 'usercenter:profile' as usercenter_profile %}
+    {% url 'usercenter:change_passwd' as usercenter_change_passwd %}
+    {% url 'usercenter:answer' as usercenter_answer %}
+    {% url 'usercenter:collect' as usercenter_collect %}
+    {% url 'usercenter:contribute' as usercenter_contribute %}
+    {% url 'usercenter:approval' as usercenter_approval %}
+
+{#    x{{ request.path }}x#}
+{#    x{{ request.url ==> 没有值 }}x#}
+{#    /usercenter/approval/#}
+{#    x{{ usercenter_profile }}x#}
+{#    x/usercenter/profile/x#}
+
+    <li role="presentation" class="{% if request.path ==  usercenter_profile %}active{% endif %}"><a href="{{ usercenter_profile }}">个人资料</a></li>
+    <li role="presentation" class="{% if request.path == usercenter_change_passwd %}active{% endif %}"><a href="{{ usercenter_change_passwd }}">修改密码</a></li>
+    <li role="presentation" class="{% if request.path == usercenter_answer %}active{% endif %}"><a href="{{ usercenter_answer }}">我的回答</a></li>
+    <li role="presentation" class="{% if request.path == usercenter_collect %}active{% endif %}"><a href="{{ usercenter_collect }}">我的收藏</a></li>
+    <li role="presentation" class="{% if request.path == usercenter_contribute %}active{% endif %}"><a href="{{ usercenter_contribute }}">我的贡献</a></li>
+    <li role="presentation" class="{% if request.path == usercenter_approval %}active{% endif %}"><a href="{{ usercenter_approval }}">待审题目</a></li>
+    </ul>
+  </div>
+</div>
